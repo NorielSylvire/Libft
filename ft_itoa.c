@@ -6,13 +6,13 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 17:10:18 by fhongu            #+#    #+#             */
-/*   Updated: 2023/04/01 18:05:17 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/04/09 22:57:04 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	recurse_integer(char *str, long n);
+static void	recurse_integer(char *str, long n);
 
 char	*ft_itoa(int n)
 {
@@ -43,7 +43,7 @@ char	*ft_itoa(int n)
 	return (ret);
 }
 
-void	recurse_integer(char *str, long n)
+static void	recurse_integer(char *str, long n)
 {
 	if (n > 9)
 	{

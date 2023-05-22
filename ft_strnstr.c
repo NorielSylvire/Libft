@@ -6,13 +6,13 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 20:25:40 by fhongu            #+#    #+#             */
-/*   Updated: 2023/03/26 18:35:01 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/04/09 22:51:04 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_loop(size_t i, size_t len, const char *needle);
+static int	ft_loop(size_t i, size_t len, const char *needle);
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -39,7 +39,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 
-int	ft_loop(size_t i, size_t len, const char *needle)
+static int	ft_loop(size_t i, size_t len, const char *needle)
 {
 	if (len == (size_t) -1)
 		return (1);

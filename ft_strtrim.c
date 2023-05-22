@@ -6,13 +6,13 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 20:56:36 by fhongu            #+#    #+#             */
-/*   Updated: 2023/03/29 20:00:52 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/04/09 22:50:33 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*return_result(const char *source, size_t n);
+static char	*return_result(const char *source, size_t n);
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -37,7 +37,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (return_result(scopy, len + 1));
 }
 
-char	*return_result(const char *source, size_t n)
+static char	*return_result(const char *source, size_t n)
 {
 	char	*ret;
 
