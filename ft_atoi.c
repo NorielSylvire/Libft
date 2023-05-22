@@ -6,13 +6,13 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 20:11:43 by fhongu            #+#    #+#             */
-/*   Updated: 2023/03/17 21:01:56 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/04/09 22:58:21 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(const char c);
+static int	ft_isspace(const char c);
 
 int	ft_atoi(const char *str)
 {
@@ -41,7 +41,7 @@ int	ft_atoi(const char *str)
 	return ((int) res);
 }
 
-int	ft_isspace(const char c)
+static int	ft_isspace(const char c)
 {
 	return (c == ' ' || (c >= '\t' && c <= '\r'));
 }
