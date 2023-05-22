@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:44:21 by fhongu            #+#    #+#             */
-/*   Updated: 2023/04/09 21:37:31 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/05/22 22:25:17 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int			ft_isalpha(int c);
 int			ft_isdigit(int c);
 int			ft_isalnum(int c);
 int			ft_isascii(int c);
+int			ft_isspace(int c);
 int			ft_isprint(int c);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
