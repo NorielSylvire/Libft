@@ -6,17 +6,17 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:11:46 by fhongu            #+#    #+#             */
-/*   Updated: 2023/04/08 21:17:15 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/04/09 22:49:53 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_words(const char **str, char delimiter);
+static size_t	count_words(const char **str, char delimiter);
 
-size_t	word_len(const char **str, char delimiter);
+static size_t	word_len(const char **str, char delimiter);
 
-int		my_free(char **ret, size_t i);
+static int		my_free(char **ret, size_t i);
 
 char	**ft_split(char const *s, char c)
 {
@@ -44,7 +44,7 @@ char	**ft_split(char const *s, char c)
 	return (ret);
 }
 
-size_t	count_words(const char **str, char dlm)
+static	size_t	count_words(const char **str, char dlm)
 {
 	size_t		nwords;
 	const char	*scopy;
@@ -69,7 +69,7 @@ size_t	count_words(const char **str, char dlm)
 	return (nwords + 1);
 }
 
-size_t	word_len(const char **str, char delimiter)
+static	size_t	word_len(const char **str, char delimiter)
 {
 	size_t	i;
 	size_t	len;
@@ -87,7 +87,7 @@ size_t	word_len(const char **str, char delimiter)
 	return (len + 1);
 }
 
-int	my_free(char **ret, size_t i)
+static int	my_free(char **ret, size_t i)
 {
 	size_t	icopy;
 

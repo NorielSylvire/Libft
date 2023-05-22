@@ -6,13 +6,13 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 19:01:26 by fhongu            #+#    #+#             */
-/*   Updated: 2023/04/01 19:53:25 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/04/09 22:54:19 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	recurse_nbr(long n, int fd);
+static void	recurse_nbr(long n, int fd);
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -27,7 +27,7 @@ void	ft_putnbr_fd(int n, int fd)
 	recurse_nbr(nbr, fd);
 }
 
-void	recurse_nbr(long n, int fd)
+static void	recurse_nbr(long n, int fd)
 {
 	char	c;
 

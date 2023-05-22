@@ -6,13 +6,13 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 19:23:49 by fhongu            #+#    #+#             */
-/*   Updated: 2023/04/08 18:28:17 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/04/09 22:49:23 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_smaller(size_t n1, size_t n2);
+static size_t	ft_smaller(size_t n1, size_t n2);
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
@@ -32,7 +32,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	return (ret);
 }
 
-size_t	ft_smaller(size_t n1, size_t n2)
+static size_t	ft_smaller(size_t n1, size_t n2)
 {
 	if ((long double) n1 <= (long double) n2)
 		return (n1);
