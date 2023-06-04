@@ -6,13 +6,14 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 18:40:25 by fhongu            #+#    #+#             */
-/*   Updated: 2023/04/01 18:51:52 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/06/04 21:11:55 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
+	return (1);
 }

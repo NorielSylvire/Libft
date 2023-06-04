@@ -6,17 +6,21 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 18:52:07 by fhongu            #+#    #+#             */
-/*   Updated: 2023/04/01 18:56:21 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/06/04 21:23:01 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
+	int	len;
+
+	len = 0;
 	while (*s)
 	{
-		ft_putchar_fd(*s, fd);
+		len += ft_putchar_fd(*s, fd);
 		s++;
 	}
+	return (len);
 }
