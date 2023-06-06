@@ -22,6 +22,8 @@ SRC = ft_toupper.c \
 	  ft_memmove.c \
 	  ft_strlcpy.c \
 	  ft_strlcat.c \
+	  ft_append.c \
+	  ft_preppend.c \
 	  ft_strnstr.c \
 	  ft_atoi.c \
 	  ft_calloc.c \

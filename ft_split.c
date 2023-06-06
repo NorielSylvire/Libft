@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:11:46 by fhongu            #+#    #+#             */
-/*   Updated: 2023/06/03 20:18:27 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/06/06 23:07:40 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static size_t	word_len(const char **str, char delimiter);
 
 static int		my_free(char **ret, size_t i);
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	char		**ret;
 	size_t		i;
