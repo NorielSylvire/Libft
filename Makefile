@@ -54,8 +54,7 @@ BSRC = ft_lstnew.c \
 OBJ = $(SRC:%=$O%.o)
 BOBJ = $(BSRC:%=$O%.o)
 NAME = libft.a
-SWP = .*.swp
-DS = .DS_Store ./*/.DS_Store
+UNW = .DS_Store ./*/.DS_Store
 
 all: mkdir $(OBJ)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
@@ -75,20 +74,20 @@ clean:
 	rm -rf $O
 
 fclean: clean
-	rm -f $(NAME)
+	rm -rf $(NAME)
 
 xclean: fclean
-	rm -f $(SWP) $(DS)
+	rm -rf $(UNW)
 
 re: fclean all
 
 bre: fclean bonus
 
 debug: re xclean
-	rm -rf $O; rm -f $(NAME); norminette
+	rm -rf $O; rm -rf $(NAME); norminette
 
 bdebug: bre xclean
-	rm -rf $O; rm -f $(NAME); norminette
+	rm -rf $O; rm -rf $(NAME); norminette
 
 cdebug: debug
 	sleep 4; clear
