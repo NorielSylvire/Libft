@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 22:57:57 by fhongu            #+#    #+#             */
-/*   Updated: 2023/06/07 23:25:13 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/06/11 19:09:52 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ char	*ft_preppend(const char *str, const char *pre)
 
 	len = ft_strlen(str);
 	len += ft_strlen(pre);
-	result = ft_calloc(len, sizeof (char));
-	while (pre)
+	result = ft_calloc(len + 1, sizeof (char));
+	while (*pre)
 		*result++ = *pre++;
-	while (str)
+	while (*str)
 		*result++ = *str++;
 	return (result - len);
 }

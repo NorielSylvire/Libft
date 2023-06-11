@@ -39,7 +39,6 @@ SRC = ft_toupper.c \
 	  ft_putstr_fd.c \
 	  ft_putendl_fd.c \
 	  ft_putnbr_fd.c \
-	  $(BSRC)
 
 BSRC = ft_lstnew.c \
 	   ft_lstadd_front.c \
@@ -56,19 +55,32 @@ BOBJ = $(BSRC:%=$O%.o)
 NAME = libft.a
 UNW = .DS_Store ./*/.DS_Store
 
+# Colors
+DEF_COLOR = \033[0;39m
+GRAY = \033[0;90m
+RED = \033[0;91m
+GREEN = \033[0;92m
+YELLOW = \033[0;93m
+BLUE = \033[0;94m
+MAGENTA = \033[0;95m
+CYAN = \033[0;96m
+WHITE = \033[0;97m
+
 all: mkdir $(OBJ)
-	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
+	@$(AR) $(ARFLAGS) $(NAME) $(OBJ)
+	@echo "$(GREEN)$(NAME) compiled successfully.$(DEF_COLOR)\n"
 
 bonus: mkdir $(BOBJ)
-	$(AR) $(ARFLAGS) $(NAME) $(BOBJ)
+	@$(AR) $(ARFLAGS) $(NAME) $(BOBJ)
+	@echo "$(GREEN)$(NAME) bonus compiled successfully.$(DEF_COLOR)\n"
 
 $(NAME): re
 
 $O%.o: %
-	$(CC) $(CFLAGS) -c $^ -o $@
+	$(CC) $(CFLAGS) -c $^ -o $@ -g
 
 mkdir:
-	mkdir $O
+	mkdir -p $O
 
 clean:
 	rm -rf $O

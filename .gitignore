@@ -1,0 +1,6 @@
+*.out*
+*.orig
+*.gch
+*.swp
+*.o
+.DS_Store
