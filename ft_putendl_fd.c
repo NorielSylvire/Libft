@@ -6,13 +6,13 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 18:56:40 by fhongu            #+#    #+#             */
-/*   Updated: 2023/06/04 21:21:45 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/06/14 22:47:55 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putendl_fd(char *s, int fd)
+int	ft_putendl_fd(const char *s, int fd)
 {
 	int	len;
 

@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:44:21 by fhongu            #+#    #+#             */
-/*   Updated: 2023/06/11 21:35:42 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/06/14 22:53:56 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,12 @@ char		*ft_preppend(const char *str, const char *pre);
 char		*ft_append(const char *str, const char *apd);
 char		**ft_split(const char *s, char c);
 char		*ft_itoa(int n);
-char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char		*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char		*ft_striteri(char *s, void (*f)(unsigned int, char*));
 int			ft_putchar_fd(char c, int fd);
-int			ft_putstr_fd(char *s, int fd);
-int			ft_putendl_fd(char *s, int fd);
+int			ft_putstr_fd(const char *s, int fd);
+int			ft_putsubstr_fd(const char *str, size_t start, size_t end, int fd);
+int			ft_putendl_fd(const char *s, int fd);
 int			ft_putnbr_fd(int n, int fd);
 int			ft_lstsize(t_list *lst);
 t_list		*ft_lstnew(void *content);
