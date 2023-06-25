@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:56:19 by fhongu            #+#    #+#             */
-/*   Updated: 2023/03/24 19:22:52 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/06/24 20:59:34 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	len;
 
 	len = 0;
-	while (*s++)
+	while (s && *s++)
 		len++;
 	return (len);
 }

@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:44:21 by fhongu            #+#    #+#             */
-/*   Updated: 2023/06/14 22:53:56 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/06/24 18:56:27 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ char		*ft_preppend(const char *str, const char *pre);
 char		*ft_append(const char *str, const char *apd);
 char		**ft_split(const char *s, char c);
 char		*ft_itoa(int n);
+char		*ft_ltoa(long n);
 char		*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char		*ft_striteri(char *s, void (*f)(unsigned int, char*));
 int			ft_putchar_fd(char c, int fd);
