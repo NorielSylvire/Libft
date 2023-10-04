@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 18:52:07 by fhongu            #+#    #+#             */
-/*   Updated: 2023/06/14 22:47:42 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/10/04 20:21:12 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,7 @@ int	ft_putstr_fd(const char *s, int fd)
 {
 	int	len;
 
-	len = 0;
-	while (*s)
-	{
-		len += ft_putchar_fd(*s, fd);
-		s++;
-	}
-	return (len);
+	len = (int) ft_strlen(s);
+	write(fd, s, len);
+	return (len);	
 }

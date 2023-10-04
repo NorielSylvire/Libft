@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:44:21 by fhongu            #+#    #+#             */
-/*   Updated: 2023/06/24 18:56:27 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/10/04 20:17:27 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,18 @@ char		*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char		*ft_striteri(char *s, void (*f)(unsigned int, char*));
 int			ft_putchar_fd(char c, int fd);
 int			ft_putstr_fd(const char *s, int fd);
+/** @brief Prints a substring to the designated fd.
+ *
+ * Prints a subset of a string to the provided file descriptor.
+ * The substring contains all characters from the start position to the
+ * end position, both included.
+ *
+ * @param str the string from which to print the substring
+ * @param start the index of the first char of the substring
+ * @param end the index of the last char of the substring
+ * @param fd the file destriptor to print to
+ * @return The number of characters that where printed to the fd
+ */
 int			ft_putsubstr_fd(const char *str, size_t start, size_t end, int fd);
 int			ft_putendl_fd(const char *s, int fd);
 int			ft_putnbr_fd(int n, int fd);
