@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:44:21 by fhongu            #+#    #+#             */
-/*   Updated: 2023/10/04 20:50:17 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/10/15 18:48:41 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int			ft_atoi(const char *str);
 void		*ft_calloc(size_t count, size_t size);
+void		ft_free(void **ptr);
 char		*ft_strdup(const char *s1);
 char		*ft_substr(const char *s, unsigned int start, size_t len);
 char		*ft_strjoin(const char *s1, const char *s2);

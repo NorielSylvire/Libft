@@ -3,4 +3,5 @@
 *.gch
 *.swp
 *.o
+*.a
 .DS_Store

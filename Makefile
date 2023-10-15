@@ -30,6 +30,7 @@ SRC = ft_toupper.c \
 	  ft_strnstr.c \
 	  ft_atoi.c \
 	  ft_calloc.c \
+	  ft_free.c \
 	  ft_strdup.c \
 	  ft_substr.c \
 	  ft_strjoin.c \
@@ -71,23 +72,30 @@ MAGENTA = \033[0;95m
 CYAN = \033[0;96m
 WHITE = \033[0;97m
 
-all: mkdir $(OBJ)
-	@$(AR) $(ARFLAGS) $(NAME) $(OBJ)
-	@echo "$(GREEN)$(NAME) compiled successfully.$(DEF_COLOR)\n"
+all: $(NAME) 
 
-bonus: mkdir $(BOBJ)
+bonus: precomp $(BOBJ)
+	@echo "$(GREEN)Objects compiled successfully.$(DEF_COLOR)\n"
+	@echo "$(YELLOW)Generating $(NAME) library archive.$(DEF_COLOR)\n"
 	@$(AR) $(ARFLAGS) $(NAME) $(BOBJ)
 	@echo "$(GREEN)$(NAME) bonus compiled successfully.$(DEF_COLOR)\n"
 
-$(NAME): re
+$(NAME): precomp $(OBJ)
+	@echo "$(GREEN)Objects compiled successfully.$(DEF_COLOR)\n"
+	@echo "$(YELLOW)Generating $(NAME) library archive.$(DEF_COLOR)\n"
+	@$(AR) $(ARFLAGS) $(NAME) $(OBJ)
+	@echo "$(GREEN)$(NAME) compiled successfully.$(DEF_COLOR)\n"
 
 $O%.o: %
 	$(CC) $(CFLAGS) -c $^ -o $@ -g
 
-mkdir:
+precomp:
+	@echo "$(YELLOW)Creating object directories.$(DEF_COLOR)\n"
 	mkdir -p $O
+	@echo "$(YELLOW)Compiling $(NAME) objects.$(DEF_COLOR)\n"
 
 clean:
+	@echo "$(GREEN)Cleaning compiled $(NAME) sources.$(DEF_COLOR)\n"
 	rm -rf $O
 
 fclean: clean
