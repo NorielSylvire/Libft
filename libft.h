@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:44:21 by fhongu            #+#    #+#             */
-/*   Updated: 2023/10/15 18:48:41 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/10/27 22:12:16 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ char		*ft_strdup(const char *s1);
 char		*ft_substr(const char *s, unsigned int start, size_t len);
 char		*ft_strjoin(const char *s1, const char *s2);
 char		*ft_strtrim(const char *s1, const char *set);
-char		*ft_preppend(const char *str, const char *pre);
-char		*ft_append(const char *str, const char *apd);
+char		*ft_preppend(const char *str, const char *pre, int fr_s, int fr_p);
+char		*ft_append(const char *str, const char *apd, int fr_s, int fr_a);
 char		*ft_strinsert(const char *str, const char *ins, size_t pos);
 char		**ft_split(const char *s, char c);
 char		*ft_itoa(int n);

@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 18:56:40 by fhongu            #+#    #+#             */
-/*   Updated: 2023/10/04 20:23:29 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/10/27 22:25:15 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ int	ft_putendl_fd(const char *s, int fd)
 {
 	char	*ret;
 
-	ret = ft_append(s, "\n");
+	ret = ft_append(s, "\n", 0, 0);
 	return (ft_putstr_fd(s, fd));
 }
