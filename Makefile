@@ -91,8 +91,15 @@ $O%.o: %
 
 precomp:
 	@echo "$(YELLOW)Creating object directories.$(DEF_COLOR)\n"
-	mkdir -p $O
+	@mkdir -p $O
 	@echo "$(YELLOW)Compiling $(NAME) objects.$(DEF_COLOR)\n"
+
+# Locally install the library in the current user's HOME directory
+linstall: all
+	@mkdir -p ~/include
+	@cp libft.h ~/include/
+	@mkdir -p ~/lib
+	@cp $(NAME) ~/lib/
 
 clean:
 	@echo "$(GREEN)Cleaning compiled $(NAME) sources.$(DEF_COLOR)\n"
@@ -106,7 +113,11 @@ xclean: fclean
 
 re: fclean all
 
+rel: re linstall
+
 bre: fclean bonus
+
+brel: bre all linstall
 
 debug: re xclean
 	rm -rf $O; rm -rf $(NAME); norminette
