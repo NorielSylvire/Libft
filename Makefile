@@ -45,19 +45,17 @@ SRC = ft_toupper.c \
 	  ft_putsubstr_fd.c \
 	  ft_putendl_fd.c \
 	  ft_putnbr_fd.c \
-
-BSRC = ft_lstnew.c \
-	   ft_lstadd_front.c \
-	   ft_lstsize.c \
-	   ft_lstlast.c \
-	   ft_lstadd_back.c \
-	   ft_lstdelone.c \
-	   ft_lstclear.c \
-	   ft_lstiter.c \
-	   ft_lstmap.c
+	  ft_lstnew.c \
+	  ft_lstadd_front.c \
+	  ft_lstsize.c \
+	  ft_lstlast.c \
+	  ft_lstadd_back.c \
+	  ft_lstdelone.c \
+	  ft_lstclear.c \
+	  ft_lstiter.c \
+	  ft_lstmap.c
 
 OBJ = $(SRC:%=$O%.o)
-BOBJ = $(BSRC:%=$O%.o)
 NAME = libft.a
 UNW = .DS_Store ./*/.DS_Store
 
@@ -73,12 +71,6 @@ CYAN = \033[0;96m
 WHITE = \033[0;97m
 
 all: $(NAME) 
-
-bonus: precomp $(BOBJ)
-	@echo "$(GREEN)Objects compiled successfully.$(DEF_COLOR)\n"
-	@echo "$(YELLOW)Generating $(NAME) library archive.$(DEF_COLOR)\n"
-	@$(AR) $(ARFLAGS) $(NAME) $(BOBJ)
-	@echo "$(GREEN)$(NAME) bonus compiled successfully.$(DEF_COLOR)\n"
 
 $(NAME): precomp $(OBJ)
 	@echo "$(GREEN)Objects compiled successfully.$(DEF_COLOR)\n"
@@ -115,20 +107,10 @@ re: fclean all
 
 rel: re linstall
 
-bre: fclean bonus
-
-brel: bre all linstall
-
 debug: re xclean
 	rm -rf $O; rm -rf $(NAME); norminette
 
-bdebug: bre xclean
-	rm -rf $O; rm -rf $(NAME); norminette
-
 cdebug: debug
-	sleep 4; clear
-
-cbdebug: bdebug
 	sleep 4; clear
 
 .PHONY: all clean fclean xclean re
