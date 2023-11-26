@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:44:21 by fhongu            #+#    #+#             */
-/*   Updated: 2023/10/27 22:12:16 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/11/26 13:11:30 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,38 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# ifndef HASMAP_DEFAULT_SIZE
+#  define HASHMAP_DEFAULT_SIZE 20
+# endif
+# ifndef HASHMAP_MAX_LOAD
+#  define HASHMAP_MAX_LOAD 0.75f
+# endif
+# ifndef HASHMAP_RESIZE_FACTOR
+#  define HASHMAP_RESIZE_FACTOR 2
+# endif
+
+typedef unsigned short	t_ushort;
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct s_key_value
+{
+	void	*value;
+	void	*key;
+}	t_key_value;
+
+typedef struct s_hashmap
+{
+	void	(*del)(void *);
+	t_list	**map;
+	int		size;
+	int		count;
+
+}	t_hashmap;
 
 int			ft_toupper(int c);
 int			ft_tolower(int c);
@@ -83,5 +109,13 @@ void		ft_lstdelone(t_list *lst, void (*del)(void *));
 void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_hashmap	*ft_hmap_new(void (*del)(void *));
+void		ft_hmap_free(t_hashmap *hmap);
+t_hashmap	*ft_hmap_resize(t_hashmap *hmap);
+void		ft_hmap_add(t_hashmap *hmap, void *key, void *value, size_t len);
+void		ft_hmap_delete(t_hashmap *hmap, void *key);
+t_ushort	ft_hash(unsigned char *key, size_t nbytes);
+void		*ft_hmap_get(t_hashmap *hmap, void *key);
+void		ft_hmap_edit(t_hashmap *hmap, void *key, void *value, size_t len);
 
 #endif
