@@ -53,7 +53,9 @@ SRC = ft_toupper.c \
 	  ft_lstdelone.c \
 	  ft_lstclear.c \
 	  ft_lstiter.c \
-	  ft_lstmap.c
+	  ft_lstmap.c \
+		ft_hmap_mod.c \
+		ft_hmap_data_transfer.c
 
 OBJ = $(SRC:%=$O%.o)
 NAME = libft.a
