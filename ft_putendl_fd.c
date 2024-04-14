@@ -6,14 +6,19 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 18:56:40 by fhongu            #+#    #+#             */
-/*   Updated: 2023/04/01 18:59:07 by fhongu           ###   ########.fr       */
+/*   Updated: 2023/11/11 18:50:14 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+int	ft_putendl_fd(const char *s, int fd)
 {
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	char	*s_endl;
+	int		ret;
+
+	s_endl = ft_append(s, "\n", 0, 0);
+	ret = ft_putstr_fd(s_endl, fd);
+	ft_free((void **) &s_endl);
+	return (ret);
 }

@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putsubstr_fd.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/01 19:01:26 by fhongu            #+#    #+#             */
-/*   Updated: 2024/04/14 22:03:13 by fhongu           ###   ########.fr       */
+/*   Created: 2023/06/14 22:37:44 by fhongu            #+#    #+#             */
+/*   Updated: 2023/10/15 21:21:11 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putnbr_fd(int n, int fd)
+int	ft_putsubstr_fd(const char *str, size_t start, size_t end, int fd)
 {
-	char	*nbr;
+	char	*sub;
 	int		ret;
 
-	nbr = ft_itoa(n);
-	if (!nbr)
+	if (!str)
 		return (0);
-	ret = ft_putstr_fd(nbr, fd);
-	ft_free((void **)&nbr);
+	sub = ft_substr(str, start, end - start + 1);
+	if (!sub)
+		return (0);
+	ft_putstr_fd(sub, fd);
+	ret = (int) ft_strlen(sub);
+	ft_free((void **) &sub);
 	return (ret);
 }
