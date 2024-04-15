@@ -80,7 +80,9 @@ SRC = stdlibft/ft_toupper.c \
 	  stdlibft/ft_hmap_data_transfer.c \
 		ft_printf/ft_printf.c \
 	  ft_printf/printchsdixXup.c \
-	  ft_printf/base_format.c
+	  ft_printf/base_format.c \
+		get_next_line/get_next_line.c \
+		get_next_line/get_next_line_utils.c
 OBJ = $(SRC:%.c=$(OBJ_PATH)/%.o)
 TSRC =
 TMAIN = $(TSRC_PATH)/main.c
