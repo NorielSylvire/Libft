@@ -1,66 +1,93 @@
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-AR = ar
-ARFLAGS = -crs
-O = obj/
-SRC = ft_toupper.c \
-	  ft_tolower.c \
-	  ft_isalpha.c \
-	  ft_isupper.c \
-	  ft_islower.c \
-	  ft_isdigit.c \
-	  ft_isalnum.c \
-	  ft_isascii.c \
-	  ft_isspace.c \
-	  ft_isprint.c \
-	  ft_strchr.c \
-	  ft_strrchr.c \
-	  ft_strlen.c \
-	  ft_strncmp.c \
-	  ft_memset.c \
-	  ft_memchr.c \
-	  ft_bzero.c \
-	  ft_memcpy.c \
-	  ft_memcmp.c \
-	  ft_memmove.c \
-	  ft_strlcpy.c \
-	  ft_strlcat.c \
-	  ft_append.c \
-	  ft_preppend.c \
-	  ft_strinsert.c \
-	  ft_strnstr.c \
-	  ft_atoi.c \
-	  ft_calloc.c \
-	  ft_free.c \
-	  ft_strdup.c \
-	  ft_substr.c \
-	  ft_strjoin.c \
-	  ft_strtrim.c \
-	  ft_split.c \
-	  ft_itoa.c \
-	  ft_ltoa.c \
-	  ft_strmapi.c \
-	  ft_striteri.c \
-	  ft_putchar_fd.c \
-	  ft_putstr_fd.c \
-	  ft_putsubstr_fd.c \
-	  ft_putendl_fd.c \
-	  ft_putnbr_fd.c \
-	  ft_lstnew.c \
-	  ft_lstadd_front.c \
-	  ft_lstsize.c \
-	  ft_lstlast.c \
-	  ft_lstadd_back.c \
-	  ft_lstdelone.c \
-	  ft_lstclear.c \
-	  ft_lstiter.c \
-	  ft_lstmap.c \
-		ft_hmap_mod.c \
-		ft_hmap_data_transfer.c
+# Libft, a C library made from scratch!
 
-OBJ = $(SRC:%=$O%.o)
+# Tools
 NAME = libft.a
+LIBNAME = ft
+TNAME = test
+CC = clang
+CFLAGS = -Wall -Wextra -Werror -I $(INC_PATH) $(DBGFLAGS)
+COBJFLAGS = $(CFLAGS) -c
+DBGFLAGS =
+ARFLAGS = -crs
+RMFLAGS = -rf
+
+# Paths
+TGT_PATH = target
+BIN_PATH = $(TGT_PATH)/bin
+OBJ_PATH = $(TGT_PATH)/obj
+DBG_PATH = debug
+SRC_PATH = src
+INC_PATH = $(SRC_PATH)/include
+MSRC_PATH = $(SRC_PATH)/main
+TSRC_PATH = $(SRC_PATH)/test
+LI_INC_PATH = ~/include
+LI_LIB_PATH = ~/lib
+
+# Source and object files
+HDRS = libft.h
+SRC = stdlibft/ft_toupper.c \
+	  stdlibft/ft_tolower.c \
+	  stdlibft/ft_isalpha.c \
+	  stdlibft/ft_isupper.c \
+	  stdlibft/ft_islower.c \
+	  stdlibft/ft_isdigit.c \
+	  stdlibft/ft_isalnum.c \
+	  stdlibft/ft_isascii.c \
+	  stdlibft/ft_isprint.c \
+	  stdlibft/ft_strchr.c \
+	  stdlibft/ft_strrchr.c \
+	  stdlibft/ft_strlen.c \
+	  stdlibft/ft_strncmp.c \
+	  stdlibft/ft_memset.c \
+	  stdlibft/ft_memchr.c \
+	  stdlibft/ft_bzero.c \
+	  stdlibft/ft_memcpy.c \
+	  stdlibft/ft_memcmp.c \
+	  stdlibft/ft_memmove.c \
+	  stdlibft/ft_strlcpy.c \
+	  stdlibft/ft_strlcat.c \
+	  stdlibft/ft_append.c \
+	  stdlibft/ft_preppend.c \
+	  stdlibft/ft_strinsert.c \
+	  stdlibft/ft_strnstr.c \
+	  stdlibft/ft_atoi.c \
+	  stdlibft/ft_calloc.c \
+	  stdlibft/ft_free.c \
+	  stdlibft/ft_strdup.c \
+	  stdlibft/ft_substr.c \
+	  stdlibft/ft_strjoin.c \
+	  stdlibft/ft_strtrim.c \
+	  stdlibft/ft_split.c \
+	  stdlibft/ft_itoa.c \
+	  stdlibft/ft_ltoa.c \
+	  stdlibft/ft_strmapi.c \
+	  stdlibft/ft_striteri.c \
+	  stdlibft/ft_putchar_fd.c \
+	  stdlibft/ft_putstr_fd.c \
+	  stdlibft/ft_putsubstr_fd.c \
+	  stdlibft/ft_putendl_fd.c \
+	  stdlibft/ft_putnbr_fd.c \
+	  stdlibft/ft_lstnew.c \
+	  stdlibft/ft_lstadd_front.c \
+	  stdlibft/ft_lstsize.c \
+	  stdlibft/ft_lstlast.c \
+	  stdlibft/ft_lstadd_back.c \
+	  stdlibft/ft_lstdelone.c \
+	  stdlibft/ft_lstclear.c \
+	  stdlibft/ft_lstiter.c \
+	  stdlibft/ft_lstmap.c \
+	  stdlibft/ft_hmap_mod.c \
+	  stdlibft/ft_hmap_data_transfer.c
+OBJ = $(SRC:%.c=$(OBJ_PATH)/%.o)
+TSRC =
+TMAIN = $(TSRC_PATH)/main.c
+TOBJ = $(TSRC:%.c=$(OBJ_PATH)/%.o)
+
+# Config
+# Unwanted files to be deleted
 UNW = .DS_Store ./*/.DS_Store
+# No. of seconds the screen output will be visible for
+SECONDS_VISIBLE = 4
 
 # Colors
 DEF_COLOR = \033[0;39m
@@ -73,47 +100,76 @@ MAGENTA = \033[0;95m
 CYAN = \033[0;96m
 WHITE = \033[0;97m
 
-all: $(NAME) 
+all: $(NAME)
 
-$(NAME): precomp $(OBJ)
-	@echo "$(GREEN)Objects compiled successfully.$(DEF_COLOR)\n"
-	@echo "$(YELLOW)Generating $(NAME) library archive.$(DEF_COLOR)\n"
-	@$(AR) $(ARFLAGS) $(NAME) $(OBJ)
+$(NAME): mkdir $(OBJ)
+	@echo "\n$(GREEN)$(NAME) objects compiled successfully.$(DEF_COLOR)\n"
+	@echo "$(YELLOW)Creating archive file.$(DEF_COLOR)\n"
+	@$(AR) $(ARFLAGS) $(BIN_PATH)/$(NAME) $(OBJ)
 	@echo "$(GREEN)$(NAME) compiled successfully.$(DEF_COLOR)\n"
 
-$O%.o: %
-	$(CC) $(CFLAGS) -c $^ -o $@ -g
+debug: DBGFLAGS := -g
+debug: $(NAME)
 
-precomp:
-	@echo "$(YELLOW)Creating object directories.$(DEF_COLOR)\n"
-	@mkdir -p $O
-	@echo "$(YELLOW)Compiling $(NAME) objects.$(DEF_COLOR)\n"
+test: $(NAME) $(TOBJ) $(TMAIN)
+	@echo "\n$(GREEN)$(TNAME) objects compiled successfully.$(DEF_COLOR)\n"
+	@echo "$(YELLOW)Linking objects.$(DEF_COLOR)\n"
+	@$(CC) $(CFLAGS) $(TOBJ) $(TMAIN:%.c=$(OBJ_PATH)/%.o) -L$(BIN_PATH) -l$(LIBNAME) -o $(TNAME)
+	@echo "$(GREEN)$(TNAME) compiled successfully.$(DEF_COLOR)\n"
+	@echo "$(MAGENTA)Running tests.$(DEF_COLOR)\n"
+	@./$(BIN_PATH)/$(TNAME)
+	@make fclean
 
-# Locally install the library in the current user's HOME directory
-linstall: all
-	@mkdir -p ~/include
-	@cp libft.h ~/include/
-	@mkdir -p ~/lib
-	@cp $(NAME) ~/lib/
+$(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
+	@mkdir -p $(@D)
+	@$(CC) $(COBJFLAGS) $^ -o $@
 
-clean:
-	@echo "$(GREEN)Cleaning compiled $(NAME) sources.$(DEF_COLOR)\n"
-	rm -rf $O
+linstall:
+	@mkdir -p $(LI_INC_PATH)
+	@cp $(INC_PATH)/$(HDRS) $(LI_INC_PATH)
+	@mkdir -p $(LI_LIB_PATH)
+	@cp $(BIN_PATH)/$(NAME) $(LI_LIB_PATH)
+	#TODO: Add the INC_PATH before HDRS to the templates repo
 
-fclean: clean
-	rm -rf $(NAME)
+mkdir:
+	@mkdir -p $(BIN_PATH)
+	@mkdir -p $(OBJ_PATH)
+#	@mkdir -p $(OBJ_PATH)/other/path
 
-xclean: fclean
-	rm -rf $(UNW)
+preclean:
+	@echo "\n$(YELLOW)Cleaning project up...$(DEF_COLOR)"
 
+postclean:
+	@echo "\n$(GREEN)Done!$(DEF_COLOR)\n"
+
+clean: preclean clean-body postclean
+
+clean-body:
+	@$(RM) $(RMFLAGS) $(OBJ_PATH) $(BIN_PATH) $(TGT_PATH)
+
+fclean: preclean fclean-body postclean
+
+fclean-body: clean-body
+	@$(RM) $(RMFLAGS) $(NAME)
+
+xclean: preclean xclean-body postclean
+
+xclean-body: fclean-body
+	@$(RM) $(RMFLAGS) $(UNW)
 re: fclean all
 
-rel: re linstall
+bre: fclean bonus
 
-debug: re xclean
-	rm -rf $O; rm -rf $(NAME); norminette
+try: re xclean
+	norminette
 
-cdebug: debug
-	sleep 4; clear
+btry: bre xclean
+	norminette
 
-.PHONY: all clean fclean xclean re
+ctry: try
+	sleep $(SECONDS_VISIBLE); clear
+
+cbtry: btry
+	sleep $(SECONDS_VISIBLE); clear
+
+.PHONY: all clean fclean xclean re bonus bre
