@@ -9,7 +9,7 @@ CFLAGS = -Wall -Wextra -Werror -I $(INC_PATH) $(DBGFLAGS)
 COBJFLAGS = $(CFLAGS) -c
 DBGFLAGS =
 ARFLAGS = -crs
-RMFLAGS = -r
+RMFLAGS = -rf
 
 # Paths
 TGT_PATH = target
@@ -76,8 +76,8 @@ SRC = stdlibft/ft_toupper.c \
 	  stdlibft/ft_lstclear.c \
 	  stdlibft/ft_lstiter.c \
 	  stdlibft/ft_lstmap.c \
-		stdlibft/ft_hmap_mod.c \
-		stdlibft/ft_hmap_data_transfer.c
+	  stdlibft/ft_hmap_mod.c \
+	  stdlibft/ft_hmap_data_transfer.c
 OBJ = $(SRC:%.c=$(OBJ_PATH)/%.o)
 TSRC =
 TMAIN = $(TSRC_PATH)/main.c
@@ -104,9 +104,8 @@ all: $(NAME)
 
 $(NAME): mkdir $(OBJ)
 	@echo "\n$(GREEN)$(NAME) objects compiled successfully.$(DEF_COLOR)\n"
-	@cp $(LFT_PATH)/libft.a $(BIN_PATH)/$(NAME)
-	@echo "\n$(YELLOW)Creating archive file.$(DEF_COLOR)\n"
-	@$(AR) $(BIN_PATH)/$(NAME) $(OBJ)
+	@echo "$(YELLOW)Creating archive file.$(DEF_COLOR)\n"
+	@$(AR) $(ARFLAGS) $(BIN_PATH)/$(NAME) $(OBJ)
 	@echo "$(GREEN)$(NAME) compiled successfully.$(DEF_COLOR)\n"
 
 debug: DBGFLAGS := -g
@@ -121,7 +120,8 @@ test: $(NAME) $(TOBJ) $(TMAIN)
 	@./$(BIN_PATH)/$(TNAME)
 	@make fclean
 
-$(OBJ_PATH)/%.o: %.c
+$(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
+	@mkdir -p $(@D)
 	@$(CC) $(COBJFLAGS) $^ -o $@
 
 linstall:
@@ -140,22 +140,22 @@ preclean:
 	@echo "\n$(YELLOW)Cleaning project up...$(DEF_COLOR)"
 
 postclean:
-	@echo "\n$(GREEN)Done!$(DEF_COLOR)"
+	@echo "\n$(GREEN)Done!$(DEF_COLOR)\n"
 
 clean: preclean clean-body postclean
 
 clean-body:
-	@$(RM) $(OBJ_PATH)
+	@$(RM) $(RMFLAGS) $(OBJ_PATH) $(BIN_PATH) $(TGT_PATH)
 
 fclean: preclean fclean-body postclean
 
 fclean-body: clean-body
-	@$(RM) $(NAME)
+	@$(RM) $(RMFLAGS) $(NAME)
 
 xclean: preclean xclean-body postclean
 
 xclean-body: fclean-body
-	@$(RM) $(UNW)
+	@$(RM) $(RMFLAGS) $(UNW)
 re: fclean all
 
 bre: fclean bonus
