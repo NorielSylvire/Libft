@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 18:59:17 by fhongu            #+#    #+#             */
-/*   Updated: 2023/03/17 19:38:20 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:24:59 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

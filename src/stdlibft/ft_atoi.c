@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 20:11:43 by fhongu            #+#    #+#             */
-/*   Updated: 2024/04/14 22:00:05 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:12:49 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 int	ft_atoi(const char *str)
 {

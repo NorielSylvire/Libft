@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:45:48 by fhongu            #+#    #+#             */
-/*   Updated: 2023/03/08 19:55:23 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:15:49 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 int	ft_isprint(int c)
 {

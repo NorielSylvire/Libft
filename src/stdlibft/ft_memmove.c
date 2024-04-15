@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 18:47:06 by fhongu            #+#    #+#             */
-/*   Updated: 2023/03/15 22:20:57 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:23:15 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {

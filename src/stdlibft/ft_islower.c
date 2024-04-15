@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 21:36:26 by fhongu            #+#    #+#             */
-/*   Updated: 2023/06/11 21:37:32 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:14:44 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 int	ft_islower(int c)
 {

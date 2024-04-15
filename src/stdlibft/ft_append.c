@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 22:18:19 by fhongu            #+#    #+#             */
-/*   Updated: 2023/10/27 22:12:39 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:13:11 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 char	*ft_append(const char *str, const char *apd, int fr_s, int fr_a)
 {

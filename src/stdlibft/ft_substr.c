@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 19:23:49 by fhongu            #+#    #+#             */
-/*   Updated: 2023/04/09 22:49:23 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:25:19 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 static size_t	ft_smaller(size_t n1, size_t n2);
 

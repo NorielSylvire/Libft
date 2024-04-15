@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 22:57:57 by fhongu            #+#    #+#             */
-/*   Updated: 2023/10/27 22:12:49 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:23:32 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 char	*ft_preppend(const char *str, const char *pre, int fr_s, int fr_p)
 {

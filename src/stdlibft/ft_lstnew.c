@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 21:30:30 by fhongu            #+#    #+#             */
-/*   Updated: 2023/04/08 21:36:00 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:17:14 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 t_list	*ft_lstnew(void *content)
 {

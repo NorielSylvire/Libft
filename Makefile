@@ -24,7 +24,7 @@ LI_INC_PATH = ~/include
 LI_LIB_PATH = ~/lib
 
 # Source and object files
-HDRS = libft.h
+HDRS = libft.h ft_printf.h
 SRC = stdlibft/ft_toupper.c \
 	  stdlibft/ft_tolower.c \
 	  stdlibft/ft_isalpha.c \
@@ -77,7 +77,10 @@ SRC = stdlibft/ft_toupper.c \
 	  stdlibft/ft_lstiter.c \
 	  stdlibft/ft_lstmap.c \
 	  stdlibft/ft_hmap_mod.c \
-	  stdlibft/ft_hmap_data_transfer.c
+	  stdlibft/ft_hmap_data_transfer.c \
+		ft_printf/ft_printf.c \
+	  ft_printf/printchsdixXup.c \
+	  ft_printf/base_format.c
 OBJ = $(SRC:%.c=$(OBJ_PATH)/%.o)
 TSRC =
 TMAIN = $(TSRC_PATH)/main.c
@@ -126,10 +129,9 @@ $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 
 linstall:
 	@mkdir -p $(LI_INC_PATH)
-	@cp $(INC_PATH)/$(HDRS) $(LI_INC_PATH)
+	@cp $(HDRS:%.h=$(INC_PATH)/%.h) $(LI_INC_PATH)
 	@mkdir -p $(LI_LIB_PATH)
 	@cp $(BIN_PATH)/$(NAME) $(LI_LIB_PATH)
-	#TODO: Add the INC_PATH before HDRS to the templates repo
 
 mkdir:
 	@mkdir -p $(BIN_PATH)

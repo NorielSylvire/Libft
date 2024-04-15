@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 21:43:55 by fhongu            #+#    #+#             */
-/*   Updated: 2023/03/24 20:02:38 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:24:36 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 19:19:01 by fhongu            #+#    #+#             */
-/*   Updated: 2023/03/13 21:22:58 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:14:23 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 int	ft_isascii(int c)
 {

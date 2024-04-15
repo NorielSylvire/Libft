@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 20:56:36 by fhongu            #+#    #+#             */
-/*   Updated: 2023/04/09 22:50:33 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:25:15 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 static char	*return_result(const char *source, size_t n);
 

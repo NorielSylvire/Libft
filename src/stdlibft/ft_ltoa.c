@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/24 18:53:51 by fhongu            #+#    #+#             */
-/*   Updated: 2023/06/24 18:55:49 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:22:47 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 static void	recurse_integer(char *str, long n);
 

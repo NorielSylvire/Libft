@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 20:05:11 by fhongu            #+#    #+#             */
-/*   Updated: 2023/03/13 21:10:34 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:23:25 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

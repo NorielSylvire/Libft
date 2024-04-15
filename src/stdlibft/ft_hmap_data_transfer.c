@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 13:01:04 by fhongu            #+#    #+#             */
-/*   Updated: 2023/11/28 21:41:22 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:13:49 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 static void	add_new(t_hashmap *hmap, void *key, void *value, size_t len);
 

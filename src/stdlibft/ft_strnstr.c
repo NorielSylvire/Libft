@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 20:25:40 by fhongu            #+#    #+#             */
-/*   Updated: 2023/04/09 22:51:04 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:25:05 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 static int	ft_loop(size_t i, size_t len, const char *needle);
 

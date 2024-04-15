@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:55:38 by fhongu            #+#    #+#             */
-/*   Updated: 2023/03/08 18:09:40 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:14:29 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 int	ft_isdigit(int c)
 {

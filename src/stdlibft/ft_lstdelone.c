@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/09 20:02:27 by fhongu            #+#    #+#             */
-/*   Updated: 2023/04/09 20:09:29 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:16:53 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {

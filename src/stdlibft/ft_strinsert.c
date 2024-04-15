@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 20:51:21 by fhongu            #+#    #+#             */
-/*   Updated: 2023/10/27 22:24:43 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:24:20 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 char	*ft_strinsert(const char *str, const char *ins, size_t pos)
 {

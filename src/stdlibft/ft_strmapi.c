@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 18:17:01 by fhongu            #+#    #+#             */
-/*   Updated: 2023/06/14 22:46:42 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:24:51 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {

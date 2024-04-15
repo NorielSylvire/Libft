@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 20:11:46 by fhongu            #+#    #+#             */
-/*   Updated: 2024/04/14 22:03:45 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:24:05 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 static size_t	count_words(const char **str, char delimiter);
 

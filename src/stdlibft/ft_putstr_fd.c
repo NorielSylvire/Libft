@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 18:52:07 by fhongu            #+#    #+#             */
-/*   Updated: 2023/10/11 21:31:21 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:23:55 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 int	ft_putstr_fd(const char *s, int fd)
 {

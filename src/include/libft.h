@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:44:21 by fhongu            #+#    #+#             */
-/*   Updated: 2024/04/14 21:59:40 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:15:39 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ int			ft_isalnum(int c);
 int			ft_isascii(int c);
 int			ft_isspace(int c);
 int			ft_isprint(int c);
+int			ft_islower(int c);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
 size_t		ft_strlen(const char *s);

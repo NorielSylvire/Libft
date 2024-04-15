@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 11:59:34 by fhongu            #+#    #+#             */
-/*   Updated: 2023/11/28 21:10:11 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:14:01 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
  * to create and free hashmaps, and functions to add or remove elements.
  */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 t_hashmap	*ft_hmap_new(void (*del)(void *))
 {

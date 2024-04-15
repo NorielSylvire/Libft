@@ -6,11 +6,11 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 18:23:55 by fhongu            #+#    #+#             */
-/*   Updated: 2023/03/17 18:59:22 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/15 20:25:09 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
