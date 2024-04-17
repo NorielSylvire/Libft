@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 17:32:18 by fhongu            #+#    #+#             */
-/*   Updated: 2024/04/15 22:02:12 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/17 21:58:58 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,7 +122,7 @@ static char	*read_line(int fd, char *ret)
 		}
 		if (ret && str)
 			joinfree(&ret, str, chars_read);
-		if (ft_strchr(str, '\n') + 1 != 0)
+		if (ft_idx_strchr(str, '\n') + 1 != 0)
 			break ;
 	}
 	ft_free((void **) &str);
@@ -136,7 +136,7 @@ static char	*create_return(char *str)
 
 	if (*str == '\0')
 		return (NULL);
-	i = (size_t) ft_strchr(str, '\n') + 2;
+	i = (size_t) ft_idx_strchr(str, '\n') + 2;
 	if (i == 1)
 		i = ft_strlen(str) + 1;
 	ret = ft_calloc(i, sizeof (char));

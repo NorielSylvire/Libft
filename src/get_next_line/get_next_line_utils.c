@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 17:34:25 by fhongu            #+#    #+#             */
-/*   Updated: 2024/04/15 22:04:13 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/17 21:58:08 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,21 @@ char	*ft_ptr_strnjoin(char const *s1, char const *s2, int chars_read)
 		chars_read--;
 	}
 	return (ret - total_size + 1);
+}
+
+size_t	ft_idx_strchr(const char *s, int c)
+{
+	unsigned char	ch;
+	int				i;
+
+	ch = (unsigned char) c;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i++] == ch)
+			return (--i);
+	}
+	if (ch == '\0')
+		return (i);
+	return (-1);
 }

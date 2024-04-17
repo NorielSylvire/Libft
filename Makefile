@@ -24,7 +24,7 @@ LI_INC_PATH = ~/include
 LI_LIB_PATH = ~/lib
 
 # Source and object files
-HDRS = libft.h ft_printf.h
+HDRS = libft.h ft_printf.h get_next_line.h
 SRC = stdlibft/ft_toupper.c \
 	  stdlibft/ft_tolower.c \
 	  stdlibft/ft_isalpha.c \
@@ -34,6 +34,7 @@ SRC = stdlibft/ft_toupper.c \
 	  stdlibft/ft_isalnum.c \
 	  stdlibft/ft_isascii.c \
 	  stdlibft/ft_isprint.c \
+	  stdlibft/ft_isspace.c \
 	  stdlibft/ft_strchr.c \
 	  stdlibft/ft_strrchr.c \
 	  stdlibft/ft_strlen.c \
@@ -129,11 +130,13 @@ $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 	@mkdir -p $(@D)
 	@$(CC) $(COBJFLAGS) $^ -o $@
 
-linstall:
+linstall: $(NAME)
+	@echo "$(YELLOW)Installing header and library to user's  local include directory.$(DEF_COLOR)\n"
 	@mkdir -p $(LI_INC_PATH)
 	@cp $(HDRS:%.h=$(INC_PATH)/%.h) $(LI_INC_PATH)
 	@mkdir -p $(LI_LIB_PATH)
 	@cp $(BIN_PATH)/$(NAME) $(LI_LIB_PATH)
+	@echo "$(GREEN)Library installed successfully.$(DEF_COLOR)\n"
 
 mkdir:
 	@mkdir -p $(BIN_PATH)

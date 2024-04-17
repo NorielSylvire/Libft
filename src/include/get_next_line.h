@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 17:32:38 by fhongu            #+#    #+#             */
-/*   Updated: 2024/04/15 22:02:07 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/17 21:57:40 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,16 @@ char	*get_next_line(int fd);
  * @return A new string consisting of s1 + s2
  */
 char	*ft_ptr_strnjoin(char const *s1, char const *s2, int chars_read);
+/** @brief Returns the index of the first ocurrence of a character.
+ *
+ * This is a modified version of ft_strchr that returns an index
+ * of type size_t of the first ocurrence of the character passed as
+ * parameter, instead of a pointer to the first ocurrence of that char.
+ *
+ * @param s the string that will be read
+ * @param c the char that will be found, passed as int
+ * @return The index of the first occurrence of c
+ */
+size_t	ft_idx_strchr(const char *s, int c);
 
 #endif
