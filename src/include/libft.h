@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:44:21 by fhongu            #+#    #+#             */
-/*   Updated: 2024/04/15 20:15:39 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/04/17 23:12:03 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,18 +47,132 @@ typedef struct s_hashmap
 
 }	t_hashmap;
 
+/** @brief Return the uppercase version of char c.
+ * 
+ * It takes a character c as parameter and if it's a lowecase letter,
+ * it turns it into an uppercase letter and returns it. If it isn't an
+ * uppercase letter, it returns it unchanged.
+ *
+ * @param c the char to be made into uppercase
+ * @return The uppercase character
+ */
 int			ft_toupper(int c);
+/** @brief Return the lowercase version of char c.
+ * 
+ * It takes a character c as parameter and if it's an uppercase letter,
+ * it turns it into a lowercase letter and returns it. If it isn't a
+ * lowercase letter, it returns it unchanged.
+ *
+ * @param c the char to be made into lowercase
+ * @return The lowercase character
+ */
 int			ft_tolower(int c);
+/** @brief Returns 1 if c is an uppercase letter.
+ * 
+ * It takes a char as a parameter and if it's an uppercase letter, returns
+ * true, otherwise it returns false.
+ *
+ * @param c the char that will be analyzed
+ * @return True or false
+ */
 int			ft_isupper(int c);
+/** @brief Returns 1 if c is an alphabetic character.
+ * 
+ * It takes a char as a parameter and if it's an alphabetic char, meaning
+ * a letter, regardless of if it's upper or lowercase, returns true,
+ * otherwise it returns false.
+ *
+ * @param c the char that will be analyzed
+ * @return True or false
+ */
 int			ft_isalpha(int c);
+/** @brief Returns 1 if c is a digit (0-9).
+ * 
+ * It takes a char as a parameter and if it's a digit, returns
+ * true, otherwise it returns false.
+ *
+ * @param c the char that will be analyzed
+ * @return True or false
+ */
 int			ft_isdigit(int c);
+/** @brief Returns 1 if c is an alphanumeric character.
+ * 
+ * It takes a char as a parameter and if it's an alphanumeric char, meaning
+ * it's either a letter or a number, but not  a symbol such as $, or another
+ * special character, returns true, otherwise it returns false.
+ *
+ * @param c the char that will be analyzed
+ * @return True or false
+ */
 int			ft_isalnum(int c);
+/** @brief Returns 1 if c is part of the ASCII table.
+ * 
+ * It takes a char as a parameter and if it's part of the American Standard
+ * Code for Information Interchange (ASCII), that is, between 0 and 127,
+ * returns true, otherwise it returns false.
+ *
+ * @param c the char that will be analyzed
+ * @return True or false
+ */
 int			ft_isascii(int c);
+/** @brief Returns 1 if c is a spacing character.
+ * 
+ * It takes a character c as parameter and if it's a spacing character (space,
+ * tab, newline...), it returns true, otherwise it returns false.
+ *
+ * @param c the char to be analyzed
+ * @return True or false
+ */
 int			ft_isspace(int c);
+/** @brief Returns 1 if c is a printable character.
+ * 
+ * It takes a character c as parameter and if it's a printable character,
+ * that is, a letter, a digit, or a symbol, it returns true,
+ * otherwise it returns false.
+ *
+ * @param c the char to be analyzed
+ * @return True or false
+ */
 int			ft_isprint(int c);
+/** @brief Returns 1 if c is a lowercase letter.
+ * 
+ * It takes a character c as parameter and if it's a lowercase letter,
+ * it returns true, otherwise it returns false.
+ *
+ * @param c the char to be analyzed
+ * @return True or false
+ */
 int			ft_islower(int c);
+/** @brief Returns a pointer to the first occurrence of a character.
+ * 
+ * It takes a string s and a char c as a parameter and searches for the
+ * first occurrence of the char c. If it is found it returns a pointer to
+ * that character. If it isn't found, it returns a NULL pointer.
+ *
+ * @param s the string that will be searched
+ * @param c the char that will be searched for
+ * @return A pointer to the first occurrence of c, or NULL
+ */
 char		*ft_strchr(const char *s, int c);
+/** @brief Returns a pointer to the last occurrence of a character.
+ * 
+ * It takes a string s and a char c as a parameter and searches for the
+ * last occurrence of the char c. If it is found it returns a pointer to
+ * that character. If it isn't found, it returns a NULL pointer.
+ *
+ * @param s the string that will be searched
+ * @param c the char that will be searched for
+ * @return A pointer to the last occurrence of c, or NULL
+ */
 char		*ft_strrchr(const char *s, int c);
+/** @brief Returns the number of characters in the string s.
+ * 
+ * It takes a string s as a parameter and counts the number of characters
+ * thatt string has, then returns it as a size_t (unsigned long).
+ *
+ * @param s the string whose length will be measured
+ * @return The length of the string
+ */
 size_t		ft_strlen(const char *s);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 void		*ft_memset(void *b, int c, size_t len);
