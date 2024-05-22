@@ -4,7 +4,7 @@
 NAME = libft.a
 LIBNAME = ft
 TNAME = test
-CC = clang
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror -I $(INC_PATH) $(DBGFLAGS)
 COBJFLAGS = $(CFLAGS) -c
 DBGFLAGS =
