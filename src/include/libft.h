@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:44:21 by fhongu            #+#    #+#             */
-/*   Updated: 2024/04/17 23:12:03 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/05/22 21:16:47 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -233,5 +233,10 @@ void		ft_hmap_delete(t_hashmap *hmap, void *key, size_t len);
 t_ushort	ft_hash(unsigned char *key, size_t nbytes);
 void		*ft_hmap_get(t_hashmap *hmap, void *key, size_t len);
 void		ft_hmap_edit(t_hashmap *hmap, void *key, void *value, size_t len);
+int			ft_trgb(int t, int r, int g, int b);
+int			ft_get_t(int trgb);
+int			ft_get_r(int trgb);
+int			ft_get_g(int trgb);
+int			ft_get_b(int trgb);
 
 #endif
