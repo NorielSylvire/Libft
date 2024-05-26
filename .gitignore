@@ -7,5 +7,4 @@
 .DS_Store
 libft.a
 compile_flags.txt
-dox/*
 target/*
