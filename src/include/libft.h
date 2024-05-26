@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:44:21 by fhongu            #+#    #+#             */
-/*   Updated: 2024/05/22 21:16:47 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/05/26 12:52:40 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -233,10 +233,55 @@ void		ft_hmap_delete(t_hashmap *hmap, void *key, size_t len);
 t_ushort	ft_hash(unsigned char *key, size_t nbytes);
 void		*ft_hmap_get(t_hashmap *hmap, void *key, size_t len);
 void		ft_hmap_edit(t_hashmap *hmap, void *key, void *value, size_t len);
+/** @brief Creates an int representation of a trgb color.
+ * Takes four int components of a trgb color that must be between 0 and 255.
+ * Anything greater will break the function.
+ * 
+ * @param t the transparency component of the trgb color
+ * @param r the red component of the trgb color
+ * @param g the green component of the trgb color
+ * @param b the blue component of the trgb color
+ * @return an int representation of the trgb color
+ */
 int			ft_trgb(int t, int r, int g, int b);
+/** @brief Returns the t component of the trgb color.
+ * Takes an int representation of a trgb color as parameter.
+ * Retuns that color's transparency component.
+ * 
+ * @param trgb and int representation of the trgb color
+ * @return the color's transparency component
+ */
 int			ft_get_t(int trgb);
+/** @brief Returns the r component of the trgb color.
+ * Takes an int representation of a trgb color as parameter.
+ * Retuns that color's red component.
+ * 
+ * @param trgb and int representation of the trgb color
+ * @return the color's red component
+ */
 int			ft_get_r(int trgb);
+/** @brief Returns the g component of the trgb color.
+ * Takes an int representation of a trgb color as parameter.
+ * Retuns that color's green component.
+ * 
+ * @param trgb and int representation of the trgb color
+ * @return the color's green component
+ */
 int			ft_get_g(int trgb);
+/** @brief Returns the b component of the trgb color.
+ * Takes an int representation of a trgb color as parameter.
+ * Retuns that color's bñue component.
+ * 
+ * @param trgb and int representation of the trgb color
+ * @return the color's blue component
+ */
 int			ft_get_b(int trgb);
+/** @brief Returns the milliseconds of the current time of the day.
+ * Takes the current time of the day, converts its seconds and microseconds
+ * into milliseconds, adds them together and returns them.
+ *
+ * @return the milliseconds of the current time of the day
+ */
+int			ft_millis(void);
 
 #endif
