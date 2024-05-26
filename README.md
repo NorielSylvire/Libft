@@ -2,4 +2,6 @@
 
 This is Libft, a library of functions I will be using for other projects at 42Madrid.
 
+See \ref stuff "the library's main header file" for more information.
+
 Full documentation coming with the next update!

@@ -6,10 +6,17 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:44:21 by fhongu            #+#    #+#             */
-/*   Updated: 2024/05/26 12:52:40 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/05/26 14:43:34 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/** @file libft.h
+ * @brief This is libft's most important header file.
+ * @section stuff The library's main header file!
+ * This header file includes all other headers from this library. It also
+ * has the definitions and documentation for most functions in the library.
+ * \todo Separate stdlibft into multiple sub-sections for improved readability.
+ */
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
