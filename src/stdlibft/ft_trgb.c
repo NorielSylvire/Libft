@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 21:10:40 by fhongu            #+#    #+#             */
-/*   Updated: 2024/05/22 21:14:32 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/06/07 22:35:51 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_trgb(int t, int r, int g, int b)
 {
-	return (t << 24 | r << 16 | g << 8 | b);
+	return ((t % 256) << 24 | (r % 256) << 16 | (g % 256) << 8 | (b % 256));
 }
 
 int	ft_get_t(int trgb)
