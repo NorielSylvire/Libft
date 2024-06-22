@@ -81,6 +81,7 @@ SRC = stdlibft/ft_toupper.c \
 	  stdlibft/ft_hmap_data_transfer.c \
 	  stdlibft/ft_trgb.c \
 	  stdlibft/ft_time.c \
+	  stdlibft/ft_char_count.c \
 	  ft_printf/ft_printf.c \
 	  ft_printf/printchsdixXup.c \
 	  ft_printf/base_format.c \

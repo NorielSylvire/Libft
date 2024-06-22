@@ -6,7 +6,7 @@
 /*   By: fhongu <fhongu@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:44:21 by fhongu            #+#    #+#             */
-/*   Updated: 2024/05/26 14:43:34 by fhongu           ###   ########.fr       */
+/*   Updated: 2024/06/23 00:17:17 by fhongu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -255,7 +255,7 @@ int			ft_trgb(int t, int r, int g, int b);
  * Takes an int representation of a trgb color as parameter.
  * Retuns that color's transparency component.
  * 
- * @param trgb and int representation of the trgb color
+ * @param trgb an int representation of the trgb color
  * @return the color's transparency component
  */
 int			ft_get_t(int trgb);
@@ -263,7 +263,7 @@ int			ft_get_t(int trgb);
  * Takes an int representation of a trgb color as parameter.
  * Retuns that color's red component.
  * 
- * @param trgb and int representation of the trgb color
+ * @param trgb an int representation of the trgb color
  * @return the color's red component
  */
 int			ft_get_r(int trgb);
@@ -271,7 +271,7 @@ int			ft_get_r(int trgb);
  * Takes an int representation of a trgb color as parameter.
  * Retuns that color's green component.
  * 
- * @param trgb and int representation of the trgb color
+ * @param trgb an int representation of the trgb color
  * @return the color's green component
  */
 int			ft_get_g(int trgb);
@@ -279,7 +279,7 @@ int			ft_get_g(int trgb);
  * Takes an int representation of a trgb color as parameter.
  * Retuns that color's bñue component.
  * 
- * @param trgb and int representation of the trgb color
+ * @param trgb an int representation of the trgb color
  * @return the color's blue component
  */
 int			ft_get_b(int trgb);
@@ -290,5 +290,13 @@ int			ft_get_b(int trgb);
  * @return the milliseconds of the current time of the day
  */
 int			ft_millis(void);
+/** @brief Returns the number of occurrences of char c in string str.
+ * Takes a string and a char as parameters, and counts the number of times
+ * the char appears. Then returns that number.
+ * @param str the string in which to look for c
+ * @param c the char that will be searched for
+ * return an int containing the number of occurrences of c in str
+ */
+int			ft_char_count(char *str, int c);
 
 #endif
